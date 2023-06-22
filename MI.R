@@ -40,30 +40,30 @@ mutual_information <- function(mat) {
   return(est)
 }
 
-x <- platypus.gl
-x <- gl.drop.pop(x,pop.list = "TENTERFIELD")
-x <- gl.filter.callrate(x,threshold = 1)
-x <- gl.filter.monomorphs(x)
-
-tmp_genind <- dartR::gl2gi(tmp)
-tmp_hierf <-  hierfstat::genind2hierfstat(tmp_genind)
-tmp_allele_matrix <- allele.count(tmp_hierf)
-tmp_MI <- lapply(tmp_allele_matrix, mutual_information)
-res[i, "MI"] <- round(mean(unlist(tmp_MI)), 3)
-res[i, "MI_SE"] <- round(std(unlist(tmp_MI)), 3)
-
-res <- mutual_information(x)
-res_2 <- gl.report.diversity(x)
+# x <- platypus.gl
+# x <- gl.drop.pop(x,pop.list = "TENTERFIELD")
+# x <- gl.filter.callrate(x,threshold = 1)
+# x <- gl.filter.monomorphs(x)
+# 
+# tmp_genind <- dartR::gl2gi(x)
+# tmp_hierf <-  hierfstat::genind2hierfstat(tmp_genind)
+# tmp_allele_matrix <- allele.count(tmp_hierf)
+# tmp_MI <- lapply(tmp_allele_matrix, mutual_information)
+# res[i, "MI"] <- round(mean(unlist(tmp_MI)), 3)
+# res[i, "MI_SE"] <- round(std(unlist(tmp_MI)), 3)
+# 
+# res <- mutual_information(x)
+# res_2 <- gl.report.diversity(x)
 
 library(hierfstat)
-
-tmp_genind <- dartR::gl2gi(x)
-tmp_hierf <-  hierfstat::genind2hierfstat(tmp_genind)
-tmp_allele_matrix <- allele.count(tmp_hierf)
-tmp_MI <- lapply(tmp_allele_matrix, mutual_information)
-res <- mean(round(unname(unlist(tmp_MI)),3 ))
-
-res_2 <- gl.report.diversity(x)
+# 
+# tmp_genind <- dartR::gl2gi(x)
+# tmp_hierf <-  hierfstat::genind2hierfstat(tmp_genind)
+# tmp_allele_matrix <- allele.count(tmp_hierf)
+# tmp_MI <- lapply(tmp_allele_matrix, mutual_information)
+# res <- mean(round(unname(unlist(tmp_MI)),3 ))
+# 
+# res_2 <- gl.report.diversity(x)
 
 # [1] 0.01885066
 
