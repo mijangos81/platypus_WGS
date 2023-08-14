@@ -167,7 +167,6 @@ MI <- function(pop1,pop2){
   px.hat <- apply(prob.hat, 1, sum)
   py.hat <- apply(prob.hat, 2, sum)
   I.hat <- shannon(px.hat) + shannon(py.hat) - shannon(prob.hat)
-  # MLE of Mutual Information!
   return(I.hat)
 }
 
