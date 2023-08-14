@@ -49,7 +49,7 @@
 #then calls the nested function ‘EstMLEFun’ with the matrix data.
 
 #The mutual information estimate (‘est’) obtained from ‘EstMLEFun’ is returned as the final result of the ‘mutual_information’ function.
-
+# test 
 mutual_information <- function(mat) {
   EstMLEFun <- function(mat) {
     # MLE
