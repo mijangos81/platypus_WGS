@@ -1,0 +1,42 @@
+The bioinformatic process is completed and includes:
+
+- For the 26 genomes dataset:
+- Mapping reads to the latest reference genome using the software Nextgenmap
+- SNP calling and genotyping using the program octopus
+- SNP filtering using random forest from the program octopus
+- Subsetting by chromosome
+- Genotype validation against the DArT dataset (96% of genotypes are the same in the 26 genomes dataset and the DArT dataset)
+- Formatting of metadata
+-  For the Oxford dataset:
+- Subsetting by chromosome
+- Remapping to the latest reference genome
+- Formatting of metadata
+-  For the DArT dataset:
+- Subsetting by chromosome
+- SNP filtering
+- Remapping to the latest reference genome
+- Formatting of metadata
+- For the reference files:
+- Subsetting by chromosome GFF file based on the latest reference genome
+- Subsetting by chromosome FASTA file of the latest reference genome
+
+I have uploaded all these files to GADI (/g/data/te48/final_platypus). The name of the folder is “final_platypus”. Folders within “final_platypus” are organised by chromosome. Each chromosome folder contains all the final files of the tasks mentioned above. There are six more within “final_platypus”:
+
+- scripts - contains all the pipeline scripts used for the 26 genomes, scripts used for splitting files, scripts used for remapping, scripts used for loading data, scripts for validating data and scripts for first analyses. Pipeline steps are described in “steps_pipeline.docx”.
+- info - contains metadata information of the datasets, files for remapping and general information about the project.
+- literature - contains reference articles, including the last two articles on platypus genomics (Zhou 2020 and Martin 2018) and all their supplementary information).
+- original_files - contains the original files of Oxford, DArT and GFF files.
+- programs - contains some of the programs (for macOS) used in the scripts.
+- reference_genomes - contains the reference genomes (FASTA) used for the DArT, Oxford and 26 genomes datasets.
+
+The script for loading the data by chromosome and remapping SNPs is “chrom_analyses.R” within the folder “scripts”. 
+
+To load the data for a specific chromosome, one should:
+- download the “final_platypus” folder to the working directory you are using in RStudio.
+- open the “chrom_analyses.R” script
+- specify the chromosome to load in line 14 of this script. For example, to load chromosome 6, the input should be “6”; to load chromosome X1, the input should be ”X1”. 
+- run all the following lines. 
+
+The script is based on the developing version of dartR. To install this version, run line 7. 
+
+For some remapping tasks, it is necessary to install BLAST. Instructions are described in the script.
