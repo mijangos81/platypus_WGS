@@ -1,0 +1,35 @@
+results_3 is a folder with some results of the platypus.
+
+These results are a first step to identify loci under selection.
+
+The pdf files that start with the word “pca” are principal component analyses by chromosome. The number at the end of the file name is the name of the chromosome. Note that in most PCAs, axis 1 separates Tenterfield Creek and Severn River and axis 2 is the one that separates the populations below and above the dam in the Severn River.
+
+Files beginning with the word “platypus” include 6 graphics.
+
+On the horizontal axis is the position in the genome of the loci and on the vertical axis is the response variable.
+
+Graph 1 shows the p-value of the probability that a locus is under directional selection. This p-value was obtained using the Outflank program and using only the populations below and above the dam. The p-values in the graph are the average of the p-values of the loci in bins of 100,000 base pairs. The regions with the lowest p-values have the name of the genes in that region.
+
+Graph 2 shows the FST (between the populations below and above the dam) averaged over bins of 100,000 base pairs.
+
+Graph 3 shows the average heterozygosity of the two populations (below and above the dam) and in bins of 100,000 base pairs.
+
+Graphs 4, 5 and 6 show the loadings of the loci of axis 1, 2 and 3 respectively of the principal component analyses using the 3 populations (below and above the dam and undammed river [Tenterfield]).
+
+The PCA loadings describe how much each variable contributes to a particular principal component. Large loadings (positive or negative) indicate that a particular variable has a strong relationship to a particular principal component. The sign of a loading indicates whether a variable and a principal component are positively or negatively correlated.
+
+For example, you can see how in the X3 chromosome, around the 33 Mbp position, which is where the MHC is located, the loading of axis 2 is negative but not so much in axis 1. You can also notice that it has a high heterozygosity, high FST and low p-value.
+
+The csv file (list_genes.csv) is a list of the genes that were identified.
+
+The pdf files that start with the word “v2” are similar to the previous files but in these files, regions are divided in coding and non coding regions. Also, I used here a smoothing algorithm called LOESS (locally weighted running line smoother). This is a non-parametric smoother, although it uses linear regression at its core. As with any smoother, the idea of this algorithm is to recover the inherent signal from a noisy sample.
+
+LOESS combines much of the simplicity of linear least squares regression with the flexibility of nonlinear regression. It does this by fitting simple models to localized subsets of the data to build up a function that describes the deterministic part of the variation in the data, point by point.
+
+I am running a version of these figures with confidence intervals but they take a lot of time to run. I will send them tomorrow. 
+
+Also find a draft of the platypus work to be presented in the genetic conference to be held in Melbourne next July. 
+
+Also find the R script that I used to do all the plots. 
+
+All the platypus files are in GADI /scratch/mo73/final_platypus, including the 58 Oxford samples which were called using the same pipeline as the one used with the 26 Jenna samples. 
