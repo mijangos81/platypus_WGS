@@ -26,10 +26,4 @@ The pdf files that start with the word “v2” are similar to the previous file
 
 LOESS combines much of the simplicity of linear least squares regression with the flexibility of nonlinear regression. It does this by fitting simple models to localized subsets of the data to build up a function that describes the deterministic part of the variation in the data, point by point.
 
-I am running a version of these figures with confidence intervals but they take a lot of time to run. I will send them tomorrow. 
-
-Also find a draft of the platypus work to be presented in the genetic conference to be held in Melbourne next July. 
-
 Also find the R script that I used to do all the plots. 
-
-All the platypus files are in GADI /scratch/mo73/final_platypus, including the 58 Oxford samples which were called using the same pipeline as the one used with the 26 Jenna samples. 
