@@ -19,7 +19,7 @@ pairwise_table <- function(x,
                          j <- jvec[k]
                          if (i > j){
                            # x_tmp <- rbind(x[[i]],x[[j]])
-                           round(mean(pw_fun(x[[i]],x[[j]]), na.rm = TRUE), dec)
+                           pw_fun(x[[i]],x[[j]])
                          }else{
                            NA_real_
                          }
